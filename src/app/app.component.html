@@ -1,0 +1,42 @@
+<div class="divmain">
+
+
+  <h1>University Management </h1>
+  <label for="Enter Name Of Student"></label>
+  <input type="text" #name placeholder="Enter Name" />
+  <label for="Enter Age"></label>
+  <input type="text" #age placeholder="Enter Age"  />
+  <label for="Select Course"></label>
+  <select #course class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" class="btn btn-primary">
+    <option selected>Select Course</option>
+    <option value="MCA" >MCA</option>
+    <option value="BCA" >BCA</option>
+    <option value="BTECH">BTECH</option>
+    <option value="MTECH" >MTECH</option>
+    <option value="MSC" >MSC</option>
+  </select>
+  <div class="addd" (click)="add(name.value,age.value,course.value)"><button class="btn btn-success">Add</button></div>
+  
+  <table>
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let s of sarr">
+      <td>{{s.name}}</td>
+      <td>{{s.age}}</td>
+      <td>{{s.course}}</td>
+     <td class="btn btn-success">Addimission Successful</td>
+      
+      
+          </tr>
+   
+  </table>
+  
+
+
+ 
+ 
+</div>
